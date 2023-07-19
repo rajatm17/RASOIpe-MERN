@@ -13,7 +13,7 @@ const { recipeModel, recipeSchema } = require('./models/recipeModel');
 
 mongoose.connect(process.env.MONGODB_URI);
 
-app.use(cors());
+app.use(cors({origin:"https://radiant-marigold-4c7868.netlify.app/"}));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
