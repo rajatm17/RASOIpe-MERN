@@ -15,7 +15,8 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
   console.log('Connected to MongoDB');
 });
 
-app.use(cors({origin:'*',exposedHeaders: 'authorization'}));
+// app.use(cors({origin:'*',exposedHeaders: 'authorization'}));
+app.use(cors());
 
 app.use((req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -33,6 +34,7 @@ app.get('/', async (req, res, next) => {
   //   res.send(recipes);
   // });
   res.send("hellooooo");
+  res.json({"hello":"hi"});
 });
 
 app.use('/auth', userRouter);
