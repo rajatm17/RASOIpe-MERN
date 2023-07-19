@@ -32,6 +32,7 @@ app.get('/', async (req, res, next) => {
     if (err) res.send(err);
     res.send(recipes);
   });
+  res.send("hellooooo");
 });
 
 app.use('/auth', userRouter);
