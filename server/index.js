@@ -28,10 +28,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cors());
 
 app.get('/', async (req, res, next) => {
-  await recipeModel.find({}, (recipes, err) => {
-    if (err) res.send(err);
-    res.send(recipes);
-  });
+  // await recipeModel.find({}, (recipes, err) => {
+  //   if (err) res.send(err);
+  //   res.send(recipes);
+  // });
   res.send("hellooooo");
 });
 
