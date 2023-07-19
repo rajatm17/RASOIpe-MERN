@@ -12,7 +12,8 @@ const { recipeRouter } = require('./routes/recipeRoute');
 const { recipeModel, recipeSchema } = require('./models/recipeModel');
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
-    console.log('Connected to MongoDB');
+  console.log('Connected to MongoDB');
+});
 
 app.use(cors({origin:'*',exposedHeaders: 'authorization'}));
 
