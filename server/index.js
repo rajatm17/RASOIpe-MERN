@@ -24,6 +24,7 @@ app.use(cors());
 // });
 
 app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
   res.header('Access-Control-Allow-Origin', 'https://dynamic-kulfi-38a6d7.netlify.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
